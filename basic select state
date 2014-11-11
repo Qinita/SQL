@@ -31,3 +31,12 @@ where apply.sid = student.sid and universityinfo.cName = apply.cName
 order by GPA DESC, enrollment;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+select *
+from apply
+where major like '%Bio%';
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+select sID, sName, GPA, sizeHS, GPA*(SIZEHS/2000.0)
+from STUDENT;
