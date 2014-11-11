@@ -1,0 +1,33 @@
+select distinct sName, major
+from student, apply
+where student.sID = apply.sID;
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+select sname, GPA, decision
+from student, apply
+where student.sID = apply.sID
+    and sizeHS < 1000 and major = 'CS' and cname = 'Stanford';
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+select distinct universityinfo.cName
+from universityinfo, apply
+where universityinfo.cName = apply.cName
+    and enrollment > 20000 and major = 'CS';
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+select student.sID, sName, GPA, Apply.cName, enrollment
+from student, universityinfo, apply
+where apply.sid = student.sid and universityinfo.cName = apply.cName
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+select student.sID, sName, GPA, Apply.cName, enrollment
+from student, universityinfo, apply
+where apply.sid = student.sid and universityinfo.cName = apply.cName
+order by GPA DESC, enrollment;
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
